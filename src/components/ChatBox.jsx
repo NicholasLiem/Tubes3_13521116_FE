@@ -18,7 +18,7 @@ const ChatBox = ({ fetchSessions }) => {
   const fetchMesagges = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/chat-sessions/${selectedId}/messages`
+        `https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${selectedId}/messages`
       );
       const data = await response.json();
       setMessages(data);
@@ -51,7 +51,7 @@ useEffect(() => {
     if (selectedId) {
       try {
         await fetch(
-          `http://localhost:5000/chat-sessions/${selectedId}/messages`,
+          `https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${selectedId}/messages`,
           {
             method: "POST",
             headers: {
@@ -71,7 +71,7 @@ useEffect(() => {
     } else {
       let id = null;
       try {
-        const response = await fetch("http://localhost:5000/chat-sessions", {
+        const response = await fetch("https://backend-hbxwqsge5a-et.a.run.app/chat-sessions", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -81,7 +81,7 @@ useEffect(() => {
         id = data.session_id;
         setSelectedId(id);
         try {
-          await fetch(`http://localhost:5000/chat-sessions/${id}/messages`, {
+          await fetch(`https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${id}/messages`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -94,7 +94,7 @@ useEffect(() => {
           fetchSessions();
           try {
             const response = await fetch(
-              `http://localhost:5000/chat-sessions/${id}/messages`
+              `https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${id}/messages`
             );
             const data = await response.json();
             setMessages(data);

@@ -11,7 +11,7 @@ function App() {
   const [sessions, setSessions] = useState([]);
   const fetchSessions = async () => {
     try {
-      const response = await fetch("http://localhost:5000/chat-sessions");
+      const response = await fetch("https://backend-hbxwqsge5a-et.a.run.app/chat-sessions");
       const data = await response.json();
       setSessions(data.reverse());
     } catch (error) {

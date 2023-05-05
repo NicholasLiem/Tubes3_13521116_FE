@@ -31,7 +31,7 @@ const Session = ({ id, fetchSessions }) => {
   };
   const fetchData = async () => {
     try {
-      const link = `http://localhost:5000/chat-sessions/${id}/messages`;
+      const link = `https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${id}/messages`;
       const response = await fetch(link);
       const data = await response.json();
       data[0].sender === "user"
@@ -44,7 +44,7 @@ const Session = ({ id, fetchSessions }) => {
   };
 
   const handleDelete = async () => {
-    await fetch(`http://localhost:5000/chat-sessions/${id}`, {
+    await fetch(`https://backend-hbxwqsge5a-et.a.run.app/chat-sessions/${id}`, {
       method: "DELETE",
     });
     setSelectedId(null);

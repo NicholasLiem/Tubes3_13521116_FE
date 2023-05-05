@@ -1,5 +1,5 @@
 import React, { useRef, Fragment } from "react";
-import { Container, Input, Text, Button, Stack, Radio, RadioGroup, Box, Image, Textarea} from "@chakra-ui/react";
+import { Container, Text, Button, Stack, Radio, RadioGroup, Box, Image, Textarea} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { IoIosPaperPlane } from "react-icons/io";
 import ImaGenieKelarImage from "../assets/genieProfile.png";

@@ -45,6 +45,12 @@ const InstructionList = [
         "example" : "Pilih 2 dari Nicholas Nathania Juan, Pilih 1 dari Haha Hihi Huhu",
         "desc" : "Program akan memilih satu dari berbagai pilihan yang diinput oleh user.",
     },
+    {
+        "title" : "Fitur Multiline Query",
+        "query" : "<Query 1> | <Query 2> | <Query 3> | <Query-n>",
+        "example" : "Mainkan suit dengan Batu | Pilih 2 dari Hehe Haha Huhu Hihi | Tambahkan pertanyaan kenapa bumi berbentuk balok? dengan jawaban karena mars bergerak zigzag",
+        "desc" : "Program akan membaca '|' sebagai pemisah antar query. Setiap query yang telah dipisahkan akan diterima dan diproses oleh program.",
+    }
 ]
 
 const InstructionInfo = ({title, query, example, desc}) => {
